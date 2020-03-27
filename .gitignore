@@ -1,0 +1,53 @@
+#########
+# General
+#########
+# Logs
+logs
+*.log
+.DS_Store
+._*
+.idea
+.Trashes
+
+#########
+# Backend
+#########
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+python/
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+target/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+settings_local.py
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+#Jupyter notebook
+*.ipynb_checkpoints

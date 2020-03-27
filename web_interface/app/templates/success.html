@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Classifier</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/success.css"/>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Your image is classified as: {{ class_name }}</h1>
+    <div class="input-image-container">
+        <div class="row">
+            <div class="thumbnail">
+                <a href="/tested-garbage/{{ classified_image }}">
+                    <img src="/tested-garbage/{{ classified_image }}" style="width: 100%;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2>Same samples:</h2>
+    <div class="same-samples-container">
+        <div class="row">
+            {% for same_sample_name in same_sample_names %}
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/static/same-samples/{{ same_sample_name }}">
+                        <img src="/static/same-samples/{{ same_sample_name }}"
+                             alt="{{ same_sample_name }}" style="width:100%">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div style="width: 250px; height: 50px">
+        <a href="/" class="btn btn-primary">Wow, I like it, Wanna Do it again!</a>
+    </div>
+</div>
+</body>
+</html>

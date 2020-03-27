@@ -5,6 +5,7 @@ __Group members:__
 1. Fedor Grab
 2. Salman Rafiullah
 3. Jing Lou
+4. Chandra Maddikunta
 
 __Goal:__
 Classify which type of garbage is provided on the image. This is an image recognition task.
