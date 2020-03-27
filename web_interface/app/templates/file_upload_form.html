@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Garbage Classifier</title>
+    <link
+            rel="stylesheet"
+            media="screen"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    >
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    >
+    <link rel="stylesheet" type="text/css" href="/static/css/file_upload_form.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <h1>EAI6000 Capstone project</h1>
+    <h2>Garbage Classifier</h2>
+    <h3>Upload a photo of single garbage item to classify it</h3>
+    <h4>Note: Image should be with .jpg extension</h4>
+    <br>
+    <form action="/success" method="post" enctype="multipart/form-data">
+        <div class="input-container">
+            <input type="file" name="file"/>
+            <input type="submit" value="Classify" class="btn btn-primary mb-2">
+        </div>
+    </form>
+</div>
+</body>
+</html>
