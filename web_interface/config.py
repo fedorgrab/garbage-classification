@@ -9,10 +9,12 @@ class Config:
 
 
 class ClassifierConfig:
-    MODEL_DIR = path.abspath(path.join(Config.BASE_DIR, "..", "models"))
+    MODEL_DIR = path.abspath(path.join(Config.BASE_DIR, "..", "..", "garbage_models"))
     MODEL_NAME = "VGG16_garbage_classifier_2.h5"
     MODEL_FILE_PATH = path.join(MODEL_DIR, MODEL_NAME)
-    UPLOADED_IMAGES_FILE_PATH = path.abspath(path.join(BASE_DIR, "..", "..", "test-images"))
+    UPLOADED_IMAGES_FILE_PATH = path.abspath(
+        path.join(BASE_DIR, "..", "..", "test-images")
+    )
     CLASSES = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
     MODEL_IMAGE_SHAPE = (256, 341)
     MINIMUM_SAME_SAMPLE_INDEX = 1

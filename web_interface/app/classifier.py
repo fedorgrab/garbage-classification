@@ -2,7 +2,8 @@ import numpy as np
 from skimage.io import imread, imsave
 from skimage.transform import resize
 from tensorflow.keras import models
-from config import ClassifierConfig
+
+from web_interface.config import ClassifierConfig
 
 
 class GarbageClassifier:
@@ -26,13 +27,15 @@ class GarbageClassifier:
 
     def get_accurate_image(self, image_file):
         image_file_name = image_file.filename
-        image_file_path = f"{ClassifierConfig.UPLOADED_IMAGES_FILE_PATH}/{image_file_name}"
+        image_file_path = (
+            f"{ClassifierConfig.UPLOADED_IMAGES_FILE_PATH}/{image_file_name}"
+        )
         image = imread(image_file)
         imsave(fname=image_file_path, arr=image)
         image_resized = resize(
             image=image,
             output_shape=ClassifierConfig.MODEL_IMAGE_SHAPE,
-            anti_aliasing=True
+            anti_aliasing=True,
         )
         return self.reshape_image(image_resized), image_file_name
 
